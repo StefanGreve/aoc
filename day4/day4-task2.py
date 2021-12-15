@@ -46,7 +46,6 @@ def main(path: str):
     boards = [Board(data) for data in chunk(raw_board_data, 5)]
 
     winners = []
-    ref_count = 0
 
     for turn in range(len(numbers)):
         for board in boards:
@@ -57,7 +56,6 @@ def main(path: str):
                 if board.bingo and board not in winners:
                     board.numbers = draws
                     winners.append(board)
-                    ref_count += 1
 
     return winners[-1]
 
