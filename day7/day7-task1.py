@@ -9,8 +9,8 @@ def read_file(path: str) -> List[int]:
 def main(path: str) -> int:
     fuels = read_file(path)
     cost = lambda k: sum(map(lambda x: abs(x-k), fuels))
-    return min(map(cost, range(0, max(fuels))))
+    return min(map(cost, range(max(fuels))))
 
 if __name__ == '__main__':
     result = main('input')
-    print(f"The horizontal position that the crabs can align to using the least fuel possible is {result}.")
+    print(f"They must spend {result} units of fuels to align to a position of least cost.")
