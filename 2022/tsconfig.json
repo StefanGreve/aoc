@@ -1,11 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ES2016",
     "module": "commonjs",
     "rootDir": ".",
     "sourceMap": true,
     "outDir": "out",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-  }
+    "skipLibCheck": true,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "ES2020"
+    ],
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

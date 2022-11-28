@@ -1,0 +1,9 @@
+{
+  "endOfLine": "crlf",
+  "useTabs": false,
+  "tabWidth": 2,
+  "printWidth": 120,
+  "proseWrap": "preserve",
+  "semi": true,
+  "singleQuote": false
+}
