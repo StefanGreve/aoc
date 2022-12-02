@@ -11,7 +11,7 @@
     ],
     "rules": {
         "no-shadow": "warn",
-        "no-unused-vars": "warn",
+        "no-unused-vars": "off",
         "prefer-const": "warn",
         "prefer-rest-params": "warn",
         "prefer-spread": "warn"
