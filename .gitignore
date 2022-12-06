@@ -177,3 +177,7 @@ $RECYCLE.BIN/
 input
 
 .fake
+
+### Advent of Code ###
+input*.txt
+
