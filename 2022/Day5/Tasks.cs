@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using System.Runtime.CompilerServices;
-
-using LanguageExt;
+﻿using LanguageExt;
 
 namespace AoC2022.Day5
 {
