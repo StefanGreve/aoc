@@ -11,14 +11,15 @@ namespace AoC2022.Day1
 
             foreach (string calory in input)
             {
-                if (string.IsNullOrEmpty(calory))
+                if (int.TryParse(calory, out int value))
+                {
+                    elf.Add(value);
+                }
+
+                if (string.IsNullOrEmpty(calory) || input.Last().Equals(calory))
                 {
                     calories.Add(elf);
                     elf = new();
-                }
-                else
-                {
-                    elf.Add(int.Parse(calory));
                 }
             }
 
@@ -43,7 +44,7 @@ namespace AoC2022.Day1
 
         public static void Main(string[] args)
         {
-            var input = File.ReadAllText("input1.txt").Split(Environment.NewLine, StringSplitOptions.None);
+            var input = File.ReadAllLines("input1.txt");
             var data = ParseInput(input);
 
             int result1 = Task1(data);
