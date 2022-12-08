@@ -5,6 +5,7 @@ using AoC2022.Day2;
 using AoC2022.Day3;
 using AoC2022.Day4;
 using AoC2022.Day5;
+using AoC2022.Day6;
 
 namespace Day.Tests
 {
@@ -173,6 +174,38 @@ namespace Day.Tests
 
             // Assert
             Assert.Equal("MCD", expected);
+        }
+
+        #endregion
+
+        #region Day 6
+
+        [Theory]
+        [InlineData("test-input6.txt")]
+        public void TestDay6Task1(string path)
+        {
+            // Arrange
+            var input = File.ReadAllText(path).ToCharArray();
+
+            // Act
+            var expected = Day6.Task1(input);
+
+            // Assert
+            Assert.Equal(7, expected);
+        }
+
+        [Theory]
+        [InlineData("test-input6.txt")]
+        public void TestDay6Task2(string path)
+        {
+            // Arrange
+            var input = File.ReadAllText(path).ToCharArray();
+
+            // Act
+            var expected = Day6.Task2(input);
+
+            // Assert
+            Assert.Equal(19, expected);
         }
 
         #endregion

@@ -20,6 +20,14 @@ namespace AoC2022
             }
         }
 
+        public static IEnumerable<T> Duplicates<T>(this IEnumerable<T> source)
+        {
+            return source
+                .GroupBy(x => x)
+                .Where(g => g.Count() > 1)
+                .Select(y => y.Key);
+        }
+
         public static IEnumerable<T> Pop<T>(this IList<T> source, int n = 1)
         {
             while (n > 0)
