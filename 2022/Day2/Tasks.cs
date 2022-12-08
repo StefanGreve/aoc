@@ -33,7 +33,7 @@ namespace AoC2022.Day2
             int bonus = outcome switch
             {
                 0 => 3, // tie
-                1 => 0, // player 1 loses
+                1 => 0, // player 2 loses
                 2 => 6, // player 2 wins
             };
 
@@ -46,7 +46,7 @@ namespace AoC2022.Day2
             {
                 1 => player1 > 1 ? player1 - 1 : 3, // player 1 loses
                 2 => player1, // tie
-                3 => player1 < 3 ? player1 + 1 : 1, // player 3 wins 
+                3 => player1 < 3 ? player1 + 1 : 1, // player 1 wins 
             };
 
             return ComputeScore(player1, newMove);
